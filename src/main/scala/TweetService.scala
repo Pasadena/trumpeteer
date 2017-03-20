@@ -30,10 +30,7 @@ class TweetService {
     val now = LocalDate.now(ZoneId.of(userTimezone.getID))
     val dateFormat = new SimpleDateFormat("yyy-MM-dd")
     val tweetData = LocalDate.parse(dateFormat.format(status.getCreatedAt))
-    System.out.println(now)
-    System.out.println(now.minusDays(1))
     tweetData.isAfter(now.minusDays(1))
-    //now.getDayOfYear == tweetData.getDayOfYear && now.getYear == tweetData.getYear
   }
 
 }
